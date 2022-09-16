@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body >
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span class="year">2022</span></h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <div id="todaysDate"></div>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+   
+    <script>
+      const pom = document.querySelector('.year')
+          pom.style.fontSize = '60px'
+  
+      const cent = document.querySelector('.wrapper')
+      cent.style.textAlign = 'center'
+
+      const time = document.querySelector('#todaysDate')
+      
+      time.style.padding = '8px'
+      time.style.fontWeight = 'bold'
+      time.style.width = '20%'
+      time.style.marginLeft= '440px';
+      const fin = document.querySelector('ul')
+      fin.style.listStyle = 'none'
+      fin.style.width= '50%';
+      fin.style.textAlign= 'left';
+      fin.style.marginLeft= '240px';
+      fin.style.marginTop= '40px';
+      const pads = document.querySelectorAll('li')
+     pads[0].style.padding= '10px';
+     pads[1].style.padding= '10px';
+     pads[2].style.padding= '10px';
+     pads[3].style.padding= '10px';
+     pads[4].style.padding= '10px';
+     pads[5].style.padding= '10px';
+     pads[6].style.padding= '10px'; 
+     pads[2].style.backgroundColor= 'red';
+     pads[3].style.backgroundColor= 'red';
+     pads[4].style.backgroundColor= 'red';
+     pads[5].style.backgroundColor= 'red';
+     pads[6].style.backgroundColor= 'red';
+     pads[1].style.backgroundColor= 'yellow';
+     pads[0].style.backgroundColor= 'green';
+
+     pads[6].style.marginTop= '2px'; 
+     pads[2].style.marginTop= '2px'; 
+     pads[3].style.marginTop= '2px'; 
+     pads[4].style.marginTop= '2px'; 
+     pads[5].style.marginTop= '2px'; 
+     pads[0].style.marginTop= '2px'; 
+     pads[1].style.marginTop= '3px'; 
+     
+        function doDate()
+{
+    var str = "";
+
+    
+    var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+    var now = new Date();
+
+    str +=  months[now.getMonth()]+ " " +  now.getDate()+ " " + now.getFullYear() + " " + now.getHours() +":" + now.getMinutes() + ":" + now.getSeconds();
+    document.getElementById("todaysDate").innerHTML = str;
+  
+}
+
+setInterval(doDate, 1000);
+     
+
+
+
+
+
+         // Changing Colors
+     
+            setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  pom.style.color = "#"+randomColor;
+  time.style.backgroundColor = "#"+randomColor;
+},1000);
+
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  time.style.backgroundColor = "#"+randomColor;
+},1000);
+
+
+
+    </script>
+  </body>
+</html>
